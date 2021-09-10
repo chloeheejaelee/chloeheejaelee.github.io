@@ -21,8 +21,8 @@ layout: home
 	</head>
 	<body>
 		<div>
-			<h1>Uncle Iroh</h1>
-			<img src="qm7LkGX.gif">
+			<h1>Welcome to Chloe's Blog</h1>
+			<video autoplay loop muted>
 			<p><a href="https://www.youtube.com/watch?v=ErmZRsCIUsE"> In honor of Mako </a></p>
 		</div>
 	</body>
