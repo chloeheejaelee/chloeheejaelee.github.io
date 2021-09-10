@@ -9,13 +9,8 @@ layout: home
 		<title>Little Soldier Boy</title>
 		<style>
 			.center {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
             }
             body {
-        background-color: #efdb63;
       }
 		</style>
 	</head>
