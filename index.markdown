@@ -15,13 +15,13 @@ layout: home
 		</style>
 	</head>
 	<body>
-		<div>
+		<div class="section">
 			<h1>Welcome to Chloe's Blog</h1>
 			<video autoplay loop muted>
 				<source src="Background.mp4" type="video/mp4">
 				<source src="Background.mp4" type="video/mp4">
 				<source src="Background.mp4" type="video/mp4">
-			<p><a href="https://www.youtube.com/watch?v=ErmZRsCIUsE"> In honor of Mako </a></p>
+			<p><a> </a></p>
 		</div>
 	</body>
 </html>
