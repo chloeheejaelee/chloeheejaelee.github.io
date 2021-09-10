@@ -6,7 +6,7 @@ layout: home
 ---
 <html>
 	<head>
-		<title>Little Soldier Boy</title>
+		<title></title>
 		<style>
 			.center {
             }
@@ -21,7 +21,6 @@ layout: home
 				<source src="Background.mp4" type="video/mp4">
 				<source src="Background.mp4" type="video/mp4">
 				<source src="Background.mp4" type="video/mp4">
-			<p><a> </a></p>
 		</div>
 	</body>
 </html>
