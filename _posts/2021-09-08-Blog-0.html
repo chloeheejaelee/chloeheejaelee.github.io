@@ -1,0 +1,62 @@
+---
+layout: post
+title:  "Blog 0: Git"
+date:   2021-09-08 00:21:00 -0700
+categories: Blogs
+---
+<html>
+	<head>
+        <title>Blog 0</title>
+		<style>
+            body{
+                background-image: url(https://cdn.discordapp.com/attachments/754854758174425190/887195685974319114/wp4660132-anime-lofi-wallpapers.png);
+                background-size: cover;
+                background-position: center;
+            }
+            div{
+                background-color: rgb(193, 207, 255);
+                opacity: 0.90;
+                padding: 15px;
+                border-radius: 30px;
+            }
+			.center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+		</style>
+	</head>
+	<body>
+		<div>
+            <h1>What is Git?</h1>
+                <p> Git is the most widely used contemporary version control system today. Linus Torvalds founded Git in 2005 as a mature actively maintained open source project. Git is now used for version control in a surprising number of commercial and open source software projects. It is widely used operating systems and IDEs (Integrated Development Environments).</p>
+
+                <p>Git is an example of a distributed version control system (DVCS) (hence Distributed Version Control System). Git allows each developer's working copy of the code to serve as a repository for all changes, rather than having a single repository for the entire version history of the product, as is the case with once-popular version control systems like CVS or Subversion (commonly known as SVN). </p>
+                
+            <h1>What is Github?</h1>
+                <p>Github is a service that lets us set up hosted repositories or remote repositories that can be stored online where multiple team-members can access. This allows easier access for projects to be worked on by multiple people. Additionally, anyone can sign up and host a public code repository for free, which makes GitHub especially popular with open-source projects. </p>
+
+                <p>GitHub's interface is user-friendly enough that even novice coders can take advantage of Git. Without GitHub, utilizing Git usually demands a little more computer knowledge and command-line experience. GitHub's interface consist of a few main commands: add, commit, pull and push. Through those commands, users are able to view various branches that are being worked on as well as making your own branch and to make your own commits. </p>
+
+            <h1>Basic Github Commands</h1>
+                <p><b>git init</b>: initializes a brand new git repository and begins tracking an existing directory. It adds a hidden subfolder within the existing directory that houses the internal data structure required for a version control.</p>
+                    
+                <p><b>git clone</b>: creates a local copy of a project that already exists remotely. The clone includes all the project's files, history, and branches.</p>
+
+                <p><b>git add</b>: stages a change. Git tracks changes to a developer's codebase, but it's necessary to stage and take a snapshot of the changes to include them in the project's history. This command performs staging, the first part of the two-step process. Any changes that are staged will become a part of the next snapshot and a part of the project's history. Staging and committing separately gives developers complete control over the history of their project without changing how they code and work. </p>
+
+                <p><b>git commit</b>: save the snapshot to the project history and completes the change-tracking process. In short, a commit functions like taking a photo. Anything that's been staged with 'git add' will become a part of the snapshot with 'git commit'.</p>
+
+                <p><b>git status</b>: shows the status of changes as untracked, modified, or staged.</p>
+
+                <p><b>git branch</b>: shows the branches being worked on locally.</p>
+
+                <p><b>git merge merges</b>: lines of development together. This command is typically used to combine changes made on two distinct branches. For example, a developer would merge when they want to combine changes from a feature branch into the main branch for deployment.</p>
+
+                <p><b>git pull</b>: updates the local line of development with updates from its remote counterpart. Developers use this command if a teammate has made commits to a branch on a remote, and they would like to reflect those changes in their local environment. </p>
+
+                <p><b>git push</b>: updates the remote repository with any commits made locally to a branch.</p>
+		</div>
+	</body>
+</html>
