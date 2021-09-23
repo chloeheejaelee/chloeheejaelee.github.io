@@ -11,6 +11,10 @@ layout: home
 			.center {
             }
             body {
+				background-color: rgb(207, 238, 255);
+				background-image: url(Sky.jpg);
+                background-size: cover;
+                background-position: center;
       }
 		</style>
 	</head>
