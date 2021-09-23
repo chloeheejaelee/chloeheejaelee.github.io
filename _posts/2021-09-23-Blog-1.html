@@ -9,12 +9,12 @@ categories: Blogs
         <title>Blog 1:Bash</title>
 		<style>
             body{
-                background-image: url(https://cdn.discordapp.com/attachments/754854758174425190/887196062354382878/wp5694359-lofi-anime-1920x1080-wallpapers.jpg);
+                background-image: url(https://cdn.wallpapersafari.com/87/16/7dThHj.jpg);
                 background-size: cover;
                 background-position: center;
             }
             div{
-                background-color: rgb(193, 207, 255);
+                background-color: rgb(255, 241, 193);
                 opacity: 0.90;
                 padding: 15px;
                 border-radius: 30px;
@@ -32,35 +32,145 @@ categories: Blogs
             <h1>What is Bash?</h1>
                 <p> Bash is the shell.</p>
 
-                <p>A shell program is typically an executable binary that takes commands that you type and (once you hit return), translates those commands into system calls to the Operating System API.</p>
-
-                <p>
-
-                <p>Git is an example of a distributed version control system (DVCS) (hence Distributed Version Control System). Git allows each developer's working copy of the code to serve as a repository for all changes, rather than having a single repository for the entire version history of the product, as is the case with once-popular version control systems like CVS or Subversion (commonly known as SVN). </p>
+                <p>A shell program is typically an executable binary that takes commands that you type and (once you hit return), translates those commands into system calls to the Operating System API. Through this, bash can read and execute commands from a file. This is called a shell script. Similar to Bash's predecisor and descendant Unix shells, it supports command substitutions, filename globbing (wildcard matching), here documents, piping, variables, and control structures for condition-testing and iteration. </p>
                 
-            <h1>What is Github?</h1>
-                <p>Github is a service that lets us set up hosted repositories or remote repositories that can be stored online where multiple team-members can access. This allows easier access for projects to be worked on by multiple people. Additionally, anyone can sign up and host a public code repository for free, which makes GitHub especially popular with open-source projects. </p>
+            <h1>Bash Scripting</h1>
+                <p>One of the reasons Bash is so strong is that it can be scripted. Meaning that you can list everything from Bash in a plain-text file and have Bash run the commands for you. Compared to spending a whole day manually running a hundred commands, you can now script them and have your computer run them automatically while you finish other tasks. What makes bash even more amazing is that almost everything on Linux can run and scripted through Bash. </p>
 
-                <p>GitHub's interface is user-friendly enough that even novice coders can take advantage of Git. Without GitHub, utilizing Git usually demands a little more computer knowledge and command-line experience. GitHub's interface consist of a few main commands: add, commit, pull and push. Through those commands, users are able to view various branches that are being worked on as well as making your own branch and to make your own commits. </p>
+            <h1>Basic Bash Commands</h1>
+                 <p><b>[ ]</b>: Anything encased in [ ] means that it's optional. Some commands can be used without options or specifying files.</p>
 
-            <h1>Basic Github Commands</h1>
-                <p><b>git init</b>: initializes a brand new git repository and begins tracking an existing directory. It adds a hidden subfolder within the existing directory that houses the internal data structure required for a version control.</p>
+                <p><b>ls - List directory contents</b>: Allows you to view all files within the specified directory</p>
+                    <ul>
+                        <li>Syntax: ls [option(s)][file(s)]</li>
+                        <li>Common options: -a, -l</li>
+                    </ul>
                     
-                <p><b>git clone</b>: creates a local copy of a project that already exists remotely. The clone includes all the project's files, history, and branches.</p>
+                <p><b>echo - Prints text to the terminal window</b>: typically used to show the output status text to the screen or computer file. It is also used for showing the values of environmental variables, which tell the shell how to behave as a user works at the command line or in scripts.</p>
+                <ul>
+                    <li>Syntax: echo [option(s)][string(s)]</li>
+                    <li>Common options: -e, -n</li>
+                </ul>
 
-                <p><b>git add</b>: stages a change. Git tracks changes to a developer's codebase, but it's necessary to stage and take a snapshot of the changes to include them in the project's history. This command performs staging, the first part of the two-step process. Any changes that are staged will become a part of the next snapshot and a part of the project's history. Staging and committing separately gives developers complete control over the history of their project without changing how they code and work. </p>
+                <p><b>touch - Creates a file</b>: Used to create new files, change timestamps on files and/or directories. You can create as many files as you want in a single command without worrying about overwriting files with the same name. </p>
+                <ul>
+                    <li>Syntax: touch [option(s)][file_name(s)]</li>
+                    <li>Common options: -a, -m, -r, -d</li>
+                </ul>
 
-                <p><b>git commit</b>: save the snapshot to the project history and completes the change-tracking process. In short, a commit functions like taking a photo. Anything that's been staged with 'git add' will become a part of the snapshot with 'git commit'.</p>
+                <p><b>mkdir - Create a directory</b>: Used to create new directories. Can be used to create multiple directories simultaneously.</p>
+                <ul>
+                    <li>Syntax: mkdir [option(s)][directory_name(s)]</li>
+                    <li>Common options: -m, -p, -v</li>
+                </ul>
 
-                <p><b>git status</b>: shows the status of changes as untracked, modified, or staged.</p>
+                <p><b>grep - search</b>: used to search text for patterns specified by the user.</p>
+                <ul>
+                    <li>Syntax: grep [option(s)] pattern [file(s)]</li>
+                    <li>Common options: -i, -c, -n</li>
+                </ul>
 
-                <p><b>git branch</b>: shows the branches being worked on locally.</p>
+                <p><b>man - Print manual or get help for a command</b>: Manual for when you forget what a certain command does.</p>
+                <ul>
+                    <li>Syntax: man [option(s)][keyword(s)]</li>
+                    <li>Common options: -w, -f, -b</li>
+                </ul>
 
-                <p><b>git merge merges</b>: lines of development together. This command is typically used to combine changes made on two distinct branches. For example, a developer would merge when they want to combine changes from a feature branch into the main branch for deployment.</p>
+                <p><b>pwd - Print working directory</b>: Used to print the current directory you're in. </p>
+                <ul>
+                    <li>Syntax: pwd [option(s)]</li>
+                    <li>Common options: none</li>
+                </ul>
 
-                <p><b>git pull</b>: updates the local line of development with updates from its remote counterpart. Developers use this command if a teammate has made commits to a branch on a remote, and they would like to reflect those changes in their local environment. </p>
+                <p><b>cd - Change directory</b>: Used to change the directory you're in so that you can get info, manipulate, read, etc. the different files and directories in your system.</p>
+                <ul>
+                    <li>Syntax: cd [option(s)] directory</li>
+                    <li>Common options: None</li>
+                </ul>
 
-                <p><b>git push</b>: updates the remote repository with any commits made locally to a branch.</p>
+                <p><b>mv - Move or rename directory</b>: Used to move or rename directories. Allows you to batch file renaming which saves you time.</p>
+                <ul>
+                    <li>Syntax: mv [option(s)] argument(s)</li>
+                    <li>Common options: -i, -b</li>
+                </ul>
+
+                <p><b>rm dir - Remove directory</b>: Will remove empty directories. Helps clean and organize files and folders on the computer. It is important to note that there are two ways to remove directories: rm and rmdir. Rmdir will only delete empty directories while rm will remove directories and files regardless if they contain data or not.</p>
+                <ul>
+                    <li>Syntax: rmdir [option(s)] directory_names</li>
+                    <li>Common options: -p</li>
+                </ul>
+
+                <p><b>locate - Locate a specific file or directory</b>: Simplest way to find a file or directory. </p>
+                <ul>
+                    <li>Syntax: locate [option(s)]file_name(s)</li>
+                    <li>Common options: -q, -n, -i</li>
+                </ul>
+                    
+                <p><b>less - view the contents of a text file</b>: Allows you to view files without opening an editor. It is faster to use, and there's no chance of you inadvertently modifying the file.</p>
+                <ul>
+                    <li>Syntax: less file_name</li>
+                    <li>Common options: -e, -f, -n</li>
+                </ul>
+
+                <p><b> > - Redirect stdout</b>: This takes the output from the preceding command that you'd normally see in the terminal and sends it to a file that you give it. As an example, take echo "contents of file1" > file1. Here it creates a file called file1 and puts the echoed string into it.</p>
+                <ul>
+                    <li>Syntax: > </li>
+                    <li>Common options: N/a</li>
+                </ul>
+
+                <p><b>cat - Read a file, create a file, and concatenate files</b>: Serves three main functions: displaying them, combining copies of them, and creating new ones.</p>
+                <ul>
+                    <li>Syntax: cat [option(s)][file_name(s)][-][file_name(s)]</li>
+                    <li>Common options: -n</li>
+                </ul>
+
+                <p><b>| - Pipe</b>: A pipe takes the standard output of one command and passes it as the input to another.</p>
+                <ul>
+                    <li>Syntax: |</li>
+                    <li>Common options: N/a</li>
+                </ul>
+
+                <p><b>head - Read the start of a file</b>: Displays the first 10 lines of a file.</p>
+                <ul>
+                    <li>Syntax: head [option(s)][file(s)]</li>
+                    <li>Common options: -n</li>
+                </ul>
+
+                <p><b>tail - Read the end of a file</b>: Displays the last 10 lines of a file.</p>
+                <ul>
+                    <li>Syntax: tail [option(s)] file_names</li>
+                    <li>Common options: -n</li>
+                </ul>
+
+                <p><b>chmod - Sets the file permissions flag on a file or folder</b>: Used to change permissions on modifying a file that you don't have access to. You can use alphanumeric characters (u, g, o) and can be assigned their access with w, r, x. Conversely, you can also use octal number (0-7) to change the permissions. For example, chmod 777 my_file will give access to everyone.</p>
+                <ul>
+                    <li>Syntax: chmod [option(s)] permissions file_name</li>
+                    <li>Common options: -f, -v</li>
+                </ul>
+
+                <p><b>exit - Exit out of a directory</b>: Will close a terminal indo, end the execution of a shell script or log you out of an SSH remote access session.</p>
+                <ul>
+                    <li>Syntax: exit</li>
+                    <li>Common options: N/a</li>
+                </ul>
+
+                <p><b>history - list your most recent commands</b>: Lists our past commands you've used.</p>
+                <ul>
+                    <li>Syntax: history</li>
+                    <li>Common options: -c, -d</li>
+                </ul>
+
+                <p><b>clear - Clear your terminal window</b>: Clears all previous commands and output from consoles and terminal indows. This keeps your terminal clean and removes the clutter.</p>
+                <ul>
+                    <li>Syntax: clear</li>
+                    <li>Common options: -c, -d</li>
+                </ul>
+
+                <p><b>cp - Copy files and directories</b>: Use this command when you need to back up your files.</p>
+                <ul>
+                    <li>Syntax: cp [option(s)] current_name new_name</li>
+                    <li>Common options: -r, -i, -b</li>
+                </ul>
 		</div>
 	</body>
 </html>

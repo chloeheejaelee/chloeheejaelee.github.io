@@ -15,6 +15,7 @@ layout: home
 				background-image: url(Sky.jpg);
                 background-size: cover;
                 background-position: center;
+				color: white;
       }
 		</style>
 	</head>
