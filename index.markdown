@@ -8,7 +8,19 @@ layout: home
 	<head>
 		<title></title>
 		<style>
-			.center {
+			.left {
+				width: 5%;
+				display: block;
+				float: left;
+            }
+			.right {
+				width: 5%;
+				display: block;
+				float: right;
+            }
+			.star {
+				width: 25%;
+				float: right;
             }
             body {
 				background-color: rgb(207, 238, 255);
@@ -16,16 +28,16 @@ layout: home
                 background-size: cover;
                 background-position: center;
 				color: white;
-      }
+     		}
+			h1{
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="section">
-			<h1>Welcome to Chloe's Blog</h1>
-			<video autoplay loop muted>
-				<source src="Background.mp4" type="video/mp4">
-				<source src="Background.mp4" type="video/mp4">
-				<source src="Background.mp4" type="video/mp4">
+			<h1><img src="V3.gif" class="right">Welcome to Chloe's Blog<img src="V3.gif" class="left"></h1>
+			<a href="https://www.youtube.com/watch?v=BavJeKkdF9U"><img src="V2.gif" class="star"></a>
 		</div>
 	</body>
 </html>
