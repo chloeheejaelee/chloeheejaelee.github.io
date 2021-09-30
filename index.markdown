@@ -97,7 +97,7 @@ layout: home
 		<div class="section">
 			<h3 class="Welcome"><img src="V3.gif" class="right">Welcome to <img src="V3.gif" class="left"></h3>
 			<h1>Chloe's Blog</h1>
-			<a href="https://www.youtube.com/watch?v=BavJeKkdF9U"><img src="V2.gif" class="star"></a>
+			<a href="https://www.youtube.com/watch?v=UwxatzcYf9Q"><img src="V2.gif" class="star"></a>
 		</div>
 	</body>
 </html>
