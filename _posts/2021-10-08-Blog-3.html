@@ -76,18 +76,30 @@ categories: Blogs
                     </li>
                     <li>
                         <p>set_facts:</p>
-                        <p>Ansible_port:8080</p>
+                        <ul>
+                            <li>
+                                <p>Ansible_port:8080</p>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <p><b>tasks:</b>All playbooks contain tasks or a list of tasks that need to be executed. Thus meaning there is a list of actions that the host(s) need to perform. A tasks field contains the name of the task. This also help the user recognize the play and proves to be useful for debugging a playbook since we can see what plays work and those that do not. Every task is linked to a module that should be executed alongside the arguments required for it to execute.</p>
                 <ul>
                     <li>
                         <p>tasks:</p>
-                        <p>- name:  Change port to 8080</p>
+                        <ul>
+                            <li>
+                                <p>- name:  Change port to 8080</p>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <p>set_fact:</p>
-                        <p>Ansible_port:8080</p>
+                        <ul>
+                            <li>
+                                <p>Ansible_port:8080</p>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <p><b>become:</b>Ansible allows the user to “become” another user, different from the user that logged into the machine. Similar to tools like sudo, su, etc, the “become” tool allows the user to activate privilege escalation when you set it to “true/yes”.</p>
@@ -107,22 +119,52 @@ categories: Blogs
                 </ul>
                 <p><b>apt:</b>The “name” (without a hyphen - in front of it) will allow you to list the packages, and using “state” with options such as “Present” and “Installed” will ensure that the desired package is installed. However, the option “Latest” will not only install, but it will update the package to the latest version as well.</p>
                 <ul>
-                    <p>apt:</p>
+                    <li>
+                        <p>apt:</p>
+                    </li>
                     <li>
                         <p>name:</p>
-                        <p>curl</p>
-                        <p>git</p>
-                        <p>apache2</p>
-                        <p>mysql-client</p>
-                        <p>php</p>
-                        <p>libapache2-mod-php</p>
-                        <p>php-mysql</p>
-                        <p>php7.2-cli</p>
-                        <p>php7.2-curl</p>
-                        <p>php7.2-gd</p>
-                        <p>php7.2-mbstring</p>
-                        <p>php7.2-mysql</p>
-                        <p>php7.2-xml</p>
+                        <ul>
+                            <li>
+                                <p>curl</p>
+                            </li>
+                            <li>
+                                <p>git</p>
+                            </li>
+                            <li>
+                                <p>apache2</p>
+                            </li>
+                            <li>
+                                <p>mysql-client</p>
+                            </li>
+                            <li>
+                                <p>php</p>
+                            </li>
+                            <li>
+                                <p>libapache2-mod-php</p>
+                            </li>
+                            <li>
+                                <p>php-mysql</p>
+                            </li>
+                            <li>
+                                <p>php7.2-cli</p>
+                            </li>
+                            <li>
+                                <p>php7.2-curl</p>
+                            </li>
+                            <li>
+                                <p>php7.2-gd</p>
+                            </li>
+                            <li>
+                                <p>php7.2-mbstring</p>
+                            </li>
+                            <li>
+                                <p>php7.2-mysql</p>
+                            </li>
+                            <li>
+                                <p>php7.2-xml</p>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <p>state: present</p>
@@ -151,7 +193,11 @@ categories: Blogs
                     </li>                    
                     <li>
                         <p>args:</p>
-                        <p>chdir: /var/www/html/affinity</p>
+                        <ul>
+                            <li>
+                                <p>chdir: /var/www/html/affinity</p>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
 		</div>
