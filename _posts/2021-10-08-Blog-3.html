@@ -1,0 +1,159 @@
+---
+layout: post
+title:  "Blog 3: Ansible"
+date:   2021-10-08 00:03:43 -0700
+categories: Blogs
+---
+<html>
+	<head>
+        <title>Blog 3</title>
+		<style>
+            body{
+                background-image: url(https://dthezntil550i.cloudfront.net/qy/latest/qy2104151841509810019770993/1280_960/36b26f16-7fd8-4ec6-9a5c-c9c91c7b4304.png);
+                background-size: cover;
+            }
+            div{
+                background-color: rgb(250, 201, 173);
+                opacity: 0.90;
+                padding: 15px;
+                border-radius: 30px;
+            }
+			.center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+		</style>
+	</head>
+	<body>
+		<div>
+            <h1>Overview</h1>
+                <p>Ansible is a simple automation tool for cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs. What makes Ansible so simple and user friendly is because it doesn’t depend on agent software and has no additional security infrastructure. Ansible is also known to be easy because it uses a simple language, YAML which allows the users to describe which automation jobs need to be done in a basic structure.</p>
+            <h1>Architecture</h1> 
+                <p>How Ansible works is by connecting the user’s nodes and pushing out small programs, called “Ansible modules” to them. The programs are then written to be resource models of the preferred state of the system. The modules are then executed (over SSH by default), and removes them when finished. Multiple modules can be stored in any machine without any servers, daemons, or databases.</p>  
+            <h1>Modules</h1>     
+                <p>Modules are task plugins or library plugins that can be used from the command line or in a playbook task. Each module is run by Ansible, which collects the return values in JSON format. As a result, any programming language can be used to create these modules. Each module then takes in arguments in the form of key=value arguments where the space is delimited. While other modules take no arguments which the command/shell modules then command the string to the user on which it wants to run on. Here are a few examples:</p>       
+                <ul>
+                    <p><b>Executing Ansible modules from the command line:</b></p>
+                    <li>
+                        <p>ansible webservers -m service -a "name=httpd state=started"</p>
+                    </li>
+                    <li>
+                        <p>ansible webservers -m ping</p>
+                    </li>
+                    <li>
+                        <p>ansible webservers -m command -a "/sbin/reboot -t now"</p>
+                    </li>
+                    <p><b>Pass arguments to a module using the YAML syntax:</b></p>
+                    <li>name: restart webserver</li>
+                    <li>service</li>
+                    <li>name: httpd</li>
+                    <li>state: restarted</li>
+                </ul>      
+            <h1>Ansible Playbook</h1>          
+                <p>The Ansible Playbook are files where Ansible codes are written. Playbooks are important because they allow users to create a set of instructions(plays) that are sent to run on a single target or groups of target hosts. Essentially, a to-do list that is being checked off in order. Ansible uses Playbooks as a building block because they are files that store Ansible codes. </p>
+            <h1>Creating a Playbook</h1>
+                <p><b>name:</b>Set the name of the Playbook and what its use</p> 
+                <ul>  
+                    <li>
+                        <p>name: Install, Configure, Run Apache2</p>
+                    </li>
+                </ul>
+                <p><b>hosts:</b>This tag defines the list of hosts or host groups on which the playbook should be executed. This is a required field/tag since it tells Ansible which hosts to use to run the tasks mentioned. Tasks can be performed on the same system or remotely. Because a user might run tasks on several machines, this tag may also include a group of hosts entry. This should be done right at the start of the YAML file.</p>
+                <ul>
+                    <li>
+                        <p>---</p>
+                    </li>
+                    <li>
+                        <p>Hosts: localhost</p>
+                    </li>
+                </ul>
+                <p><b>set_fact:</b>Allows the user to set new variables on a host-by-host basis. Variables created with set_fact have different precedence depending on whether they are cached or not. In other words, it may give a value higher priority than other precedence rules for Ansible. Example below shows where we set ansible’s port to 8080.</p>
+                <ul>
+                    <li>
+                        <p>-name: Change port to 8080</p>
+                    </li>
+                    <li>
+                        <p>set_facts:</p>
+                        <p>Ansible_port:8080</p>
+                    </li>
+                </ul>
+                <p><b>tasks:</b>All playbooks contain tasks or a list of tasks that need to be executed. Thus meaning there is a list of actions that the host(s) need to perform. A tasks field contains the name of the task. This also help the user recognize the play and proves to be useful for debugging a playbook since we can see what plays work and those that do not. Every task is linked to a module that should be executed alongside the arguments required for it to execute.</p>
+                <ul>
+                    <li>
+                        <p>tasks:</p>
+                        <p>- name:  Change port to 8080</p>
+                    </li>
+                    <li>
+                        <p>set_fact:</p>
+                        <p>Ansible_port:8080</p>
+                    </li>
+                </ul>
+                <p><b>become:</b>Ansible allows the user to “become” another user, different from the user that logged into the machine. Similar to tools like sudo, su, etc, the “become” tool allows the user to activate privilege escalation when you set it to “true/yes”.</p>
+                <ul>
+                    <li>
+                        <p>name: Git clone affinity</p>
+                    </li>
+                    <li>
+                        <p>become: yes</p>
+                    </li>
+                    <li>
+                        <p>[action line here to be elevated, for example, the one below]</p>
+                    </li>
+                    <li>
+                        <p>[git: repo=https://github.com/csuntechlab/affinity.git dest=/var/www/html/affinity]</p>
+                    </li>
+                </ul>
+                <p><b>apt:</b>The “name” (without a hyphen - in front of it) will allow you to list the packages, and using “state” with options such as “Present” and “Installed” will ensure that the desired package is installed. However, the option “Latest” will not only install, but it will update the package to the latest version as well.</p>
+                <ul>
+                    <p>apt:</p>
+                    <li>
+                        <p>name:</p>
+                        <p>curl</p>
+                        <p>git</p>
+                        <p>apache2</p>
+                        <p>mysql-client</p>
+                        <p>php</p>
+                        <p>libapache2-mod-php</p>
+                        <p>php-mysql</p>
+                        <p>php7.2-cli</p>
+                        <p>php7.2-curl</p>
+                        <p>php7.2-gd</p>
+                        <p>php7.2-mbstring</p>
+                        <p>php7.2-mysql</p>
+                        <p>php7.2-xml</p>
+                    </li>
+                    <li>
+                        <p>state: present</p>
+                    </li>
+                </ul>
+                <p><b>shell:</b>The shell module takes the command name followed by a list of space-delimited arguments. The difference is that it runs the command through a shell /bin/sh on the remote node. The command shell cannot use special operators such as < > | ; & or access user-specific environment variables such as $HOME. If these operators are not needed, then it is preferred to use the command module.</p>
+                <ul>
+                    <li>
+                        <p>- name: Install composer package</p>
+                    </li>                    
+                    <li>
+                        <p>become: yes</p>
+                    </li>
+                    <li>
+                        <p>shell: curl -sS https://getcomposer.org/installer | php -- --instal-
+                            dir=/usr/local/bin --filename=composer</p>
+                    </li>
+                </ul>
+                <p><b>args:</b>Used to pass named parameters to actions that support free-formed commands in Ansible such as “shell” and “command”.</p>
+                <ul>
+                    <li>
+                        <p>- name: Run composer install</p>
+                    </li>
+                    <li>
+                        <p>command: composer install</p>
+                    </li>                    
+                    <li>
+                        <p>args:</p>
+                        <p>chdir: /var/www/html/affinity</p>
+                    </li>
+                </ul>
+		</div>
+	</body>
+</html>
